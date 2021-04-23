@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_demo=self.webpackChunkgatsby_demo||[]).push([[354],{1866:function(e,t,n){"use strict";n.r(t);var l=n(7294),u=n(5444),c=n(813),a=n(3302);t.default=function(e){return l.createElement("div",null,l.createElement("title",null,"About"),l.createElement(c.Z,null,l.createElement("p",null,"About Page")),l.createElement(a.Z,{onClick:function(){(0,u.c4)("/")}},"Go Home"))}}}]);
+//# sourceMappingURL=component---src-pages-about-jsx-d79a30fdaefed2610ef1.js.map
