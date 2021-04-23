@@ -3,7 +3,11 @@ import { Link } from 'gatsby'
 
 const AboutPage = (props) => {
     return (
-        <Link to="/">Go Home</Link>
+        <div>
+            <title>About</title>
+            <p>About Page</p>
+            <Link to="/">Go Home</Link>
+        </div>
     )
 }
 
