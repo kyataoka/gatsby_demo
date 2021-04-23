@@ -1,14 +1,18 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
+import { Button, Card } from "@material-ui/core"
 
 // markup
 const IndexPage = () => {
   return (
     <main>
       <title>Home Page</title>
-      <p>hello world</p>
-      <Link to="/">Go Home</Link>
-      <Link to="/about">Go About</Link>
+      <Card>
+        <p>hello world</p>
+      </Card>
+      <Button
+        onClick={() => {navigate('/about/')}}
+      >Go to About</Button>
     </main>
   )
 }
