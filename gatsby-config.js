@@ -3,4 +3,5 @@ module.exports = {
     title: "gatsby_demo",
   },
   plugins: ["gatsby-plugin-styled-components"],
+  pathPrefix: "/gatsby_demo",
 };
