@@ -56,8 +56,8 @@ const IndexPage = () => {
               ))}
             </Toolbar>
           </AppBar>
-        <Profile style={{height: document.documentElement.clientHeight - (headerRect?.height ?? 0)}} />
-        <Skills style={{height: document.documentElement.clientHeight - (headerRect?.height ?? 0)}} />
+        <Profile style={{height: document?.documentElement.clientHeight - (headerRect?.height ?? 0)}} />
+        <Skills style={{height: document?.documentElement.clientHeight - (headerRect?.height ?? 0)}} />
     </main>
   )
 }
