@@ -24,6 +24,9 @@ import { useClientRect } from '../hooks/useClientRect'
 // markup
 const IndexPage = () => {
   const [headerRect, headerRef] = useClientRect()
+  const sectionHeight = React.useMemo(() => (
+    document?.documentElement.clientHeight - (headerRect?.height ?? 0)
+  ))
 
   const labels = [
     {label: "Profile", name: "profile"},
@@ -56,8 +59,8 @@ const IndexPage = () => {
               ))}
             </Toolbar>
           </AppBar>
-        <Profile style={{height: document?.documentElement.clientHeight - (headerRect?.height ?? 0)}} />
-        <Skills style={{height: document?.documentElement.clientHeight - (headerRect?.height ?? 0)}} />
+        <Profile style={{height: sectionHeight}} />
+        <Skills style={{height: sectionHeight}} />
     </main>
   )
 }
