@@ -24,9 +24,11 @@ import { useClientRect } from '../hooks/useClientRect'
 // markup
 const IndexPage = () => {
   const [headerRect, headerRef] = useClientRect()
-  const sectionHeight = React.useMemo(() => (
-    document?.documentElement.clientHeight - (headerRect?.height ?? 0)
-  ))
+  const [sectionHeight, setSectionHeight] = React.useState()
+
+  React.useEffect(() => {
+    setSectionHeight(document.documentElement.clientHeight - (headerRect?.height ?? 0))
+  }, [headerRect])
 
   const labels = [
     {label: "Profile", name: "profile"},
