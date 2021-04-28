@@ -1,2 +1,0 @@
-(self.webpackChunkgatsby_demo=self.webpackChunkgatsby_demo||[]).push([[354],{866:function(e,t,n){"use strict";n.r(t);var u=n(294),a=n(444);t.default=function(e){return u.createElement(a.rU,{to:"/"},"Go Home")}}}]);
-//# sourceMappingURL=component---src-pages-about-jsx-e42e4789386e4c3d7214.js.map
