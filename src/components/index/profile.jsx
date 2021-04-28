@@ -4,21 +4,30 @@ import {
     Container,
 } from '@material-ui/core'
 
+import SectionItem from './section_item'
+
 const Profile = (props) => {
     const {
         style,
     } = props
 
     return (
-        <div style={{...style}}>
-        <Element name="profile" />
-            <Container>
-            <p>PROFILE</p>
-            {[...Array(30)].map((i, idx) => (
-                <div key={idx}>profile {idx}</div>
-            ))}
-            </Container>
-        </div>
+        <SectionItem
+            sectionName="profile"
+            style={style}
+        >
+            <div
+                style={{
+                    display: 'flex',
+                    width: '100%',
+                    height: '100%',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}
+            >
+                <p>PROFILE</p>
+            </div>
+        </SectionItem>
     )
 }
 

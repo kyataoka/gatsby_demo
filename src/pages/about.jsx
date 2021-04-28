@@ -1,21 +1,24 @@
 import React from 'react'
 import { navigate } from 'gatsby'
 import {
-    Card,
+    Container,
     Button,
 } from '@material-ui/core'
+import {
+    Fade
+} from "react-reveal"
 
 const AboutPage = (props) => {
     return (
-        <div>
-            <title>About</title>
-            <Card>
-                <p>About Page</p>
-            </Card>
-            <Button
-                onClick={() => {navigate('/')}}
-            >Go Home</Button>
-        </div>
+        <Container>
+            {[...Array(100)].map((i, idx) => (
+                <Fade
+                    key={idx}
+                >
+                <div>hoge</div>
+                </Fade>
+            ))}
+        </Container>
     )
 }
 

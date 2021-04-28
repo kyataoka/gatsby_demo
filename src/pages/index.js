@@ -12,6 +12,8 @@ import {
 } from "react-scroll"
 import {
   Zoom,
+  Fade,
+  Rotate,
 } from "react-reveal"
 
 import '../styles/global.css'
@@ -19,6 +21,7 @@ import '../styles/global.css'
 import SectionButton from "../components/index/section_button"
 import Profile from '../components/index/profile'
 import Skills from '../components/index/skills'
+import Projects from '../components/index/projects'
 import { useClientRect } from '../hooks/useClientRect'
 
 // markup
@@ -27,7 +30,7 @@ const IndexPage = () => {
   const [sectionHeight, setSectionHeight] = React.useState()
 
   React.useEffect(() => {
-    setSectionHeight(document.documentElement.clientHeight - (headerRect?.height ?? 0))
+    setSectionHeight(document.documentElement.clientHeight)
   }, [headerRect])
 
   const labels = [
@@ -42,7 +45,7 @@ const IndexPage = () => {
       <title>Home Page</title>
           <AppBar
             ref={headerRef}
-            position="sticky"
+            position="fixed"
             color="transparent"
             elevation={0}
             style={{
@@ -53,16 +56,21 @@ const IndexPage = () => {
               {labels.map((label, idx) => (
                 <SectionButton
                   key={idx}
-                  delay={idx*100}
+                  delay={idx*200}
                   to={label.name}
                   label={label.label}
-                  offset={-headerRect?.height}
                 />
               ))}
             </Toolbar>
           </AppBar>
         <Profile style={{height: sectionHeight}} />
+        <Projects style={{height: sectionHeight}} />
         <Skills style={{height: sectionHeight}} />
+        {[...Array(100)].map((i, idx) => (
+          <Fade key={idx}>
+          <div>hoge</div>
+          </Fade>
+        ))}
     </main>
   )
 }

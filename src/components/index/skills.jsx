@@ -3,6 +3,10 @@ import { Element } from 'react-scroll'
 import {
     Container,
 } from "@material-ui/core"
+import {
+    Zoom,
+    Fade,
+} from "react-reveal"
 
 const Skills = (props) => {
     const {
@@ -10,19 +14,12 @@ const Skills = (props) => {
     } = props
 
     return (
-        <div
-            style={{
-                ...style,
-                backgroundColor: "red",
-            }}
-        >
-            <Element name="skills" />
-            <Container>
-                <p>SKILLS</p>
-                {[...Array(30)].map((i, idx) => (
-                    <div key={idx}>skills {idx}</div>
+        <div>
+                {[...Array(36)].map((i, idx) => (
+                    <Zoom duration={5000} key={idx}>
+                    <div>skills {idx}</div>
+                    </Zoom>
                 ))}
-            </Container>
         </div>
     )
 }
